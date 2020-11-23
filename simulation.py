@@ -31,7 +31,7 @@ def calcELO(win: bool, player1, player2, player3):
 def updateELO(userID, elo):
     url = "https://9r1e4swuoh.execute-api.us-east-2.amazonaws.com/default/updateELOfromID/?USERID=" + userID + "&ELO=" + str(elo)
     response = requests.get(url)
-    print(response.content)
+    #print(response.content)
     return json.loads(response.content)
 
 
@@ -71,7 +71,7 @@ def fight(player1, player2, player3):
 
 def scribe(file, string):
     print(string)
-    file.write(string)
+    file.write(string + "\n")
 
 
 def main():
